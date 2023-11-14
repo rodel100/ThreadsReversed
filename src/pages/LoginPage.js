@@ -5,17 +5,19 @@ import { StyleSheet } from 'react-native';
 
 export default function LoginPage() {
     return (
-        <ImageBackground style={styled.container} resizeMode="cover" imageStyle={{ height: 700 }} source={require("../../assets/jxB9GUOHTf2.webp")}>
-            <Text style={styled.text}>Log in with your Instagram account</Text>
-            <TextInput style={styled.textInput} type="text" placeholder={"Username, phone or email"} />
-            <TextInput style={styled.textInput} type="text" placeholder={"Password"} />
-            <Pressable style={styled.loginButton}><Text style={styled.loginButtonText}>Log In</Text></Pressable>
-            <View style={{ flexDirection: "row" }}>
-                <Pressable style={styled.forgotPassword}><Text>Forgot password?</Text></Pressable>
-                <Pressable style={styled.forgotPassword}><Text>                          Register</Text></Pressable>
-            </View>
-            <Text>----------------or-------------------</Text>
-            <Pressable style={styled.instagramLoginButton}><Text>Continue with Instagram</Text></Pressable>
+        <View style={styled.flexContainer}>
+            <ImageBackground style={styled.container} resizeMode="cover" imageStyle={{ height: 700 }} source={require("../../assets/jxB9GUOHTf2.webp")}>
+                <Text style={styled.text}>Log in with your Instagram account</Text>
+                <TextInput style={styled.textInput} type="text" placeholder={"Username, phone or email"} />
+                <TextInput style={styled.textInput} type="text" placeholder={"Password"} />
+                <Pressable style={styled.loginButton}><Text style={styled.loginButtonText}>Log In</Text></Pressable>
+                <View style={{ flexDirection: "row" }}>
+                    <Pressable style={styled.forgotPassword}><Text>Forgot password?</Text></Pressable>
+                    <Pressable style={styled.forgotPassword}><Text>                          Register</Text></Pressable>
+                </View>
+                <Text>----------------or-------------------</Text>
+                <Pressable style={styled.instagramLoginButton}><Text>Continue with Instagram</Text></Pressable>
+            </ImageBackground >
             <View style={styled.footer}>
                 <Text>©2023</Text>
                 <Text> Threads terms</Text>
@@ -23,15 +25,15 @@ export default function LoginPage() {
                 <Text> Cookies</Text>
                 <Text> Report a problem</Text>
             </View>
-        </ImageBackground >
+        </View>
+
+
     )
 }
 
 const styled = StyleSheet.create({
     flexContainer: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
     },
     container: {
         flex: 1,
@@ -93,5 +95,7 @@ const styled = StyleSheet.create({
     },
     footer: {
         flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
     }
 });
