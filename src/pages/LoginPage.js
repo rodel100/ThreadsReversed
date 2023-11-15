@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View, Button, TouchableOpacity, Pressable, Text, TextInput, ImageBackground } from "react-native";
+import { Image, View, Button, TouchableOpacity, Pressable, Text, TextInput, ImageBackground } from "react-native";
 import "../../styles.css"
 import { StyleSheet } from 'react-native';
 
@@ -13,17 +13,27 @@ export default function LoginPage() {
                 <Pressable style={styled.loginButton}><Text style={styled.loginButtonText}>Log In</Text></Pressable>
                 <View style={{ flexDirection: "row" }}>
                     <Pressable style={styled.forgotPassword}><Text>Forgot password?</Text></Pressable>
-                    <Pressable style={styled.forgotPassword}><Text>                          Register</Text></Pressable>
+                    <Pressable style={styled.forgotPassword}><Text>Register</Text></Pressable>
                 </View>
                 <Text>----------------or-------------------</Text>
-                <Pressable style={styled.instagramLoginButton}><Text>Continue with Instagram</Text></Pressable>
+                <Pressable style={styled.instagramLoginButton}><Image source={require("../../assets/Instagram-Icon.png")} /><Text>Continue with Instagram</Text></Pressable>
             </ImageBackground >
             <View style={styled.footer}>
-                <Text>©2023</Text>
-                <Text> Threads terms</Text>
-                <Text> Privacy policy</Text>
-                <Text> Cookies</Text>
-                <Text> Report a problem</Text>
+                <Pressable>
+                    <Text>©2023</Text>
+                </Pressable>
+                <Pressable>
+                    <Text> Threads terms</Text>
+                </Pressable>
+                <Pressable>
+                    <Text> Privacy policy</Text>
+                </Pressable>
+                <Pressable>
+                    <Text> Cookies</Text>
+                </Pressable>
+                <Pressable>
+                    <Text> Report a problem</Text>
+                </Pressable>
             </View>
         </View>
 
