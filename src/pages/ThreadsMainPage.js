@@ -127,7 +127,7 @@ export default function ThreadsMainPage() {
         }
     ];
 
-    const TreadsItem = ({ thread }) => (
+    const ThreadItem = ({ thread }) => (
         <View>
             <Image source={{ uri: thread.user.avatarImage }} />
             <Text>{thread.user.username}</Text>
