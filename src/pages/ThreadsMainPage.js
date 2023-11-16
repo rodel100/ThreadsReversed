@@ -4,7 +4,6 @@ import { FlatList } from 'react-native-gesture-handler';
 import { Pressable } from 'react-native-web';
 
 export default function ThreadsMainPage() {
-    ///Make about 10 threads
     const dataThreadsSampleData = [
         {
             id: "1",
@@ -127,8 +126,15 @@ export default function ThreadsMainPage() {
             // No threadImage for this entry
         }
     ];
-    
 
+    const TreadsItem = ({ thread }) => (
+        <View>
+            <Image source={{ uri: thread.user.avatarImage }} />
+            <Text>{thread.user.username}</Text>
+            <Text>{thread.threadMessage}</Text>
+            <Image source={{ uri: thread.threadImage }} />
+        </View>
+    );
     return (
         <View>
             <Pressable><Image source={require("../../assets/threads-app-icon.webp")}></Image></Pressable>
