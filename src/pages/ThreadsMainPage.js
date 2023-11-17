@@ -132,7 +132,7 @@ export default function ThreadsMainPage() {
             <Image source={{ uri: thread.user.avatarImage }} />
             <Text>{thread.user.username}</Text>
             <Text>{thread.threadMessage}</Text>
-            <Image source={{ uri: thread.threadImage }} />
+            {threadImage && <Image source={{ uri: thread.threadImage }} />}
         </View>
     );
     return (
