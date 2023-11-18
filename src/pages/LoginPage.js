@@ -2,10 +2,11 @@ import * as React from 'react'
 import { Image, View, Button, TouchableOpacity, Pressable, Text, TextInput, ImageBackground } from "react-native";
 import { StyleSheet } from 'react-native';
 
-export default function LoginPage() {
+
+export default function LoginPage({navigation}) {
     return (
         <View style={styled.flexContainer}>
-            <ImageBackground style={styled.container} resizeMode="contain" imageStyle={{ height: 200 }} source={require("../../assets/jxB9GUOHTf2.webp")}>
+            <ImageBackground style={styled.container} resizeMode="contain" imageStyle={{ height: 700 }} source={require("../../assets/jxB9GUOHTf2.webp")}>
                 <Text style={styled.text}>Log in with your Instagram account</Text>
                 <TextInput style={styled.textInput} type="text" placeholder={"Username, phone or email"} />
                 <TextInput style={styled.textInput} type="text" placeholder={"Password"} />
@@ -15,7 +16,7 @@ export default function LoginPage() {
                     <Pressable style={styled.forgotPassword}><Text>  Register</Text></Pressable>
                 </View>
                 <Text>----------------or-------------------</Text>
-                <Pressable style={styled.instagramLoginButton}><Image style={styled.instagramLogoLoginIcon} source={require("../../assets/Instagram-Icon.png")}/><Text style={styled.instagramLoginText}>Continue with Instagram</Text></Pressable>
+                <Pressable style={styled.instagramLoginButton} onPress={() => navigation.navigate('ThreadsMainPage')}><Image style={styled.instagramLogoLoginIcon} source={require("../../assets/Instagram-Icon.png")} /><Text style={styled.instagramLoginText}>Continue with Instagram</Text></Pressable>
             </ImageBackground >
             <View style={styled.footer}>
                 <Pressable>
