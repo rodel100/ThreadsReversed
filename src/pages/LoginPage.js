@@ -6,7 +6,7 @@ import { StyleSheet } from 'react-native';
 export default function LoginPage({navigation}) {
     return (
         <View style={styled.flexContainer}>
-            <ImageBackground style={styled.container} resizeMode="contain" imageStyle={{ height: 700 }} source={require("../../assets/jxB9GUOHTf2.webp")}>
+            <ImageBackground style={styled.container} resizeMode="contain" imageStyle={{ height: 300 }} source={require("../../assets/jxB9GUOHTf2.webp")}>
                 <Text style={styled.text}>Log in with your Instagram account</Text>
                 <TextInput style={styled.textInput} type="text" placeholder={"Username, phone or email"} />
                 <TextInput style={styled.textInput} type="text" placeholder={"Password"} />
